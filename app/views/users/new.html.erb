@@ -1,0 +1,15 @@
+<%= form_tag "/users", method: :post, multipart: true do %>
+  <div>
+    <%= text_field_tag :full_name, nil, placeholder: "Full Name" %>
+  </div>
+  <div>
+    <%= text_field_tag :email, nil, placeholder: "Email" %>
+  </div>
+  <div>
+    <%= password_field_tag :password, nil, placeholder: "Password" %>
+  </div>
+  <div>
+    <%= file_field_tag :image, accept: 'image/*;capture=camera' %>
+  </div>
+  <%= submit_tag "Sign Up" %>
+<% end %>
